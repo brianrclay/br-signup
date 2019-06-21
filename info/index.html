@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up | Info</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/global-style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+<div class="pageWrapper">
+	<div class="pageTransWrapper">
+		<div class="transGold"></div>
+		<div class="transWhite"></div>
+		<div class="paymentTrans"></div>
+		<div class="finishTrans"></div>
+	</div>
+
+	<nav class="mainNav flex aiCenter jcBetween">
+		<img src="/images/br360-logo.png" width="150px">
+		<img src="/images/icons/help-gold.svg" class="getHelp">
+	</nav>
+	<div class="stepWrapper">
+		<p class="step gold sansSerif uppercase mb10">Step <span class="stepNumber">2</span>: <span class="smallText">Enter Info</span></p>
+		<h1 class="black serif fs60 stepHeadline mb10">Enter Your Information</h1>
+		<p class="grey mb50">You're website URL will use your first and last name. Example: first-last.brokername.com</p>
+	</div>
+
+	<div class="userInfoWrapper flex fadeUpIn aiCenter flexWrap">
+		<div class="popLabel mb20">
+			<input type="text" name="firstName" placeholder="First Name" class="userInfoInput mr20 firstNameInput">
+		</div>
+		<div class="popLabel mb20">
+			<input type="text" name="lastName" placeholder="Last Name" class="userInfoInput mr20 lastNameInput">
+		</div>
+		<div class="popLabel mb20">
+			<input type="email" name="email" placeholder="Email" class="userInfoInput mr20 emailInput">
+		</div>
+		<div class="popLabel mb20">
+			<input type="tel" name="phone" placeholder="Phone" class=" userInfoInput phoneInput">
+			<span class="inputErrorMessage flex aiCenter hide"><img src="../images/icons/error.svg" class="mr10">This input has an error</span>
+		</div>
+	</div>
+
+	<div class="nextWrapper flex jcEnd showNext">
+		<a href="/" class="backBtn sansSerif white whiteBtn mr10 btn">Back to Templates</a>
+		<a href="/payment" class="nextBtn sansSerif white goldBtn btn toInfo">Next</a>
+	</div>
+</div>
+
+<!-- MODALS -->
+
+<div class="modalOverlay" onclick="closeModal()"></div>
+
+<div class="autoCompleteWrapper offWhiteBG">
+	<div class="flex aiCenter jcBetween agent">
+		<div class="aiCenter flex">
+			<div class="userAvatar mr20"></div>
+			<span class="userName black">
+				<span class="autoFirstName">Brian</span> 
+				<span class="autoLastName">Clay</span></span>
+				<span class="autoEmail hide">brian@premierepropertygroup.com</span> 
+				<span class="autoPhone hide">919-710-2117</span></span>
+		</div>
+		<img src="/images/icons/right-carret.svg">
+	</div>
+	<div class="flex aiCenter jcBetween agent">
+		<div class="aiCenter flex">
+			<div class="userAvatar mr20"></div>
+			<span class="userName black">
+				<span class="autoFirstName">Brittany</span> 
+				<span class="autoLastName">Sheppard</span></span>
+				<span class="autoEmail hide">brittany@premierepropertygroup.com</span> 
+				<span class="autoPhone hide">801-223-1287</span></span>
+		</div>
+		<img src="/images/icons/right-carret.svg">
+	</div>
+	<div class="flex aiCenter jcBetween agent">
+		<div class="aiCenter flex">
+			<div class="userAvatar mr20"></div>
+			<span class="userName black">
+				<span class="autoFirstName">Brianne</span> 
+				<span class="autoLastName">Rolland</span></span>
+				<span class="autoEmail hide">brianne@premierepropertygroup.com</span> 
+				<span class="autoPhone hide">503-690-9087</span></span>
+		</div>
+		<img src="/images/icons/right-carret.svg">
+	</div>
+	<div class="flex aiCenter jcBetween agentHelp getHelp">
+		<span>I Don't See My Name</span>
+		<img src="/images/icons/right-carret.svg">
+	</div>
+</div>
+
+<div class="helpModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<p class="helpHeadline black ml30">Get Help</p>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody p30">
+		<!-- <a href="#">
+			<img src="/images/icons/chat.svg">
+			<p class="black mb15 mt10">Chat Now</p>
+			<div class="gold mb40">Start Chat</div>
+		</a> -->
+		<a href="tel:888-850-4867">
+			<img src="/images/icons/phone.svg">
+			<p class="black mb15 mt10">Call Us</p>
+			<div class="gold mb40">888-850-4867</div>
+		</a>
+		<a href="mailto:support@blueroof360.com">
+			<img src="/images/icons/mail.svg">
+			<p class="black mb15 mt10">Email Us</p>
+			<div class="gold mb15">support@blueroof360.com</div>
+		</a>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script type="text/javascript">
+	//AUTO COMPLETE
+
+	var firstNameBottom = $('.firstNameInput').offset().top + $('.firstNameInput').outerHeight(true);
+	var firstNameLeft = $(".firstNameInput").offset().left;
+	$('.autoCompleteWrapper').css({
+		'top': firstNameBottom + 10,
+		'left': firstNameLeft
+	});
+
+	//set position on resize
+
+	$(window).resize(function(){
+		var firstNameBottom = $('.firstNameInput').offset().top + $('.firstNameInput').outerHeight(true);
+		var firstNameLeft = $(".firstNameInput").offset().left;
+		$('.autoCompleteWrapper').css({
+			'top': firstNameBottom + 10,
+			'left': firstNameLeft
+		});
+	});
+</script>
+<!-- <script>/*<![CDATA[*/window.zE||(function(e,t,s){var n=window.zE=window.zEmbed=function(){n._.push(arguments)}, a=n.s=e.createElement(t),r=e.getElementsByTagName(t)[0];n.set=function(e){ n.set._.push(e)},n._=[],n.set._=[],a.async=true,a.setAttribute("charset","utf-8"), a.src="https://static.zdassets.com/ekr/asset_composer.js?key="+s, n.t=+new Date,a.type="text/javascript",r.parentNode.insertBefore(a,r)})(document,"script","2b4b595b-3793-44c9-8158-0fbdbde47377");/*]]>*/</script> -->
+</body>
+</html>

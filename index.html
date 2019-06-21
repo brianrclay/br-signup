@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/global-style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+            nav.mainNav{
+                    max-height: 
+            }
+
+            nav h2.brokerName img{
+            	width: 100%;
+				max-width: 200px;
+            }
+
+            @media screen and (max-width: 670px){
+            	.mobileHide{
+            		display: none;
+            	}
+            }
+    </style>
+</head>
+<body>
+
+
+
+<div class="pageWrapper">
+	<div class="pageTransWrapper">
+		<div class="transGold"></div>
+		<div class="transWhite"></div>
+		<div class="paymentTrans"></div>
+		<div class="finishTrans"></div>
+	</div>
+
+	<div class="paymentMessages flex aiCenter jcCenter">
+		<div class="grey flex aiCenter jcCenter uppercase paymentProcessing"><img src="/images/loader.svg" class="mb30" width="100">Payment Processing</div>
+		<div class="green flex aiCenter jcCenter uppercase paymentSuccessful hide"><img src="/images/icons/payment-success.svg" class="mb30" width="100">Payment Successful</div>
+		<div class="red flex aiCenter jcCenter uppercase paymentError hide"><img src="/images/icons/payment-error.svg" class="mb30" width="100">Payment Error</div>
+	</div>
+
+	<nav class="mainNav flex aiCenter jcBetween">
+		<img src="/images/br360-logo.png" width="150px"/>
+		<div class="flex aiCenter">
+			<div class="mr20 grey fs16 hide mobileHide">Current Price: $50/mo</div>
+			<img src="/images/icons/help-gold.svg" class="getHelp">
+		</div>
+	</nav>
+	<div class="stepWrapper">
+		<p class="step gold sansSerif uppercase mb10">Step <span class="stepNumber">1</span>: <span class="smallText">Pick Template</span></p>
+		<h1 class="black serif fs60 stepHeadline">Select a Template</h1>
+	</div>
+	<div class="templatesWrapper flex aiCenter jsBetween">
+		<div class="templateBlocks flex aiCenter flexWrap">
+			<div class="flex aiCenter jcCenter mb20 mr20 template template1 boxShadow">
+				<div class="templateHoverContent"> 
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-sundance.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex aiCenter jcCenter mb20 mr20 template template3 boxShadow">
+				<div class="templateHoverContent"> 
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-parkcity.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex aiCenter jcCenter mb20 mr20 template template2 boxShadow">
+				<div class="templateHoverContent"> 
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-wasatch.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex aiCenter jcCenter mb20 mr20 template template5 boxShadow">
+				<div class="templateHoverContent"> 
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-avenues.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex aiCenter jcCenter mb20 mr20 template template4 boxShadow">
+				<div class="templateHoverContent"> 
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-eden.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex aiCenter jcCenter mb20 mr20 template template6 boxShadow">
+				<div class="templateHoverContent">
+					<div class="templateOverlay"></div>
+					<div class="templateSelectWrapper flex flexDirCol aiCenter">
+						<div class="mb20 templateSelect fs20 goldBtn sansSerif uppercase white">
+							<span>Select</span>
+							<img src="/images/icons/check-white.svg">
+						</div>
+						<a class="previewTemplate uppercase sansSerif white" href="#" onclick="showPreview('http://template-vernal.realvolution.com/')">Preview</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="nextWrapper flex jcEnd">
+		<div class="backBtn sansSerif white whiteBtn mr10 btn hide">Back to Templates</div>
+		<a href="/info" class="nextBtn sansSerif white goldBtn btn toInfo">Next</a>
+	</div>
+</div>
+
+<!-- MODALS -->
+
+<div class="modalOverlay" onclick="closeModal()"></div>
+<!-- preview template -->
+<div class="previewTemplateModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<div class="deviceTypeWrapper flex aiCenter">
+			<div class="device p20 desktop pr20 activeDeviceType" onclick="resizePreview('96%', '96%')">
+				<img src="/images/icons/desktop2.svg">
+			</div>
+			<div class="device p20 tablet pr20" onclick="resizePreview('50%', '96%')">
+				<img src="/images/icons/tablet.svg">
+			</div>
+			<div class="device p20 smartPhone" onclick="resizePreview('375px', '700px')">
+				<div class="sizeFix aiCenter jcCenter">
+					<img src="/images/icons/smart-phone.svg">
+				</div>
+			</div>
+		</div>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody pb30">
+		<iframe class="templateIframe" src=""></iframe>
+	</div>
+</div>
+
+<div class="helpModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<p class="helpHeadline black ml30">Get Help</p>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody p30">
+		<!-- <a href="#">
+			<img src="/images/icons/chat.svg">
+			<p class="black mb15 mt10">Chat Now</p>
+			<div class="gold mb40">Start Chat</div>
+		</a> -->
+		<a href="tel:888-850-4867">
+			<img src="/images/icons/phone.svg">
+			<p class="black mb15 mt10">Call Us</p>
+			<div class="gold mb40">888-850-4867</div>
+		</a>
+		<a href="mailto:support@blueroof360.com">
+			<img src="/images/icons/mail.svg">
+			<p class="black mb15 mt10">Email Us</p>
+			<div class="gold mb15">support@blueroof360.com</div>
+		</a>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<!-- <script>/*<![CDATA[*/window.zE||(function(e,t,s){var n=window.zE=window.zEmbed=function(){n._.push(arguments)}, a=n.s=e.createElement(t),r=e.getElementsByTagName(t)[0];n.set=function(e){ n.set._.push(e)},n._=[],n.set._=[],a.async=true,a.setAttribute("charset","utf-8"), a.src="https://static.zdassets.com/ekr/asset_composer.js?key="+s, n.t=+new Date,a.type="text/javascript",r.parentNode.insertBefore(a,r)})(document,"script","2b4b595b-3793-44c9-8158-0fbdbde47377");/*]]>*/</script> -->
+</body>
+</html>

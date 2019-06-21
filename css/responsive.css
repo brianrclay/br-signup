@@ -1,0 +1,213 @@
+/*MOVE TO CENTERED LAYOUT*/
+@media screen and (max-width: 900px) {
+  .stepWrapper {
+    text-align: center;
+    margin-top: 55px; }
+
+  /*TEMPLATES*/
+  .templateBlocks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 60px; }
+
+  .template {
+    margin-right: 0;
+    max-width: 370px;
+    width: 100%; }
+
+  /*INFO*/
+  .mlsInfoWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .mlsInfoWrapper .popLabel input, .dropDown, .dropDown select {
+    margin-right: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+  .mlsInfoWrapper .popLabel, .mlsInfoWrapper .dropDown {
+    width: 100%; }
+
+  /*MLS INFO*/
+  .userInfoWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .userInfoWrapper .popLabel input {
+    margin-right: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+  .userInfoWrapper .popLabel {
+    width: 100%; }
+
+  /*LOGO*/
+  .logoWrapper, .profilePicWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0 60px; }
+
+  .logoBtnsWrapper {
+    margin: 20px auto 0;
+    width: 260px; }
+
+  .logoBtnsWrapper div {
+    font-size: 14px;
+    letter-spacing: 1.3px; }
+
+  .currentLogo {
+    margin: 0 auto;
+    width: 260px;
+    height: 260px; }
+
+  .currentLogo:before {
+    font-size: 12px;
+    left: 27px; }
+
+  /*PAYMENT*/
+  .paymentWrapper {
+    margin-bottom: 60px; }
+
+  .paymentWrapper .popLabel input {
+    margin-right: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+  .paymentWrapper .popLabel {
+    width: 100%; }
+
+  .formRow {
+    margin-bottom: 0; }
+
+  .formRow div {
+    padding: 0;
+    margin-bottom: 20px; }
+
+  .packagesWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+  .packagesBox {
+    width: 100%;
+    margin-right: 0; }
+
+  .comparePackages {
+    text-align: center;
+    margin: 30px 0 50px; }
+
+  /*REVIEW*/
+  .reviewTop {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+
+  .reviewLogo {
+    margin-top: 60px; }
+
+  .reviewTop .template {
+    height: 100%; }
+
+  .reviewTop > div {
+    width: 45%; }
+
+  .reviewTop > div:nth-child(odd) {
+    margin-right: 5%; }
+
+  /*NEXT BUTTON STYLES*/
+  .nextWrapper {
+    padding: 0; }
+
+  .nextBtn, .backBtn {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+  .nextBtn {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35);
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.35); }
+
+  .backBtn {
+    background-color: #f3f3f3; }
+
+  /*PREIVEW MODAL*/
+  .tablet {
+    display: none; } }
+@media screen and (max-width: 670px) {
+  .reviewTop > div {
+    width: 100%; }
+
+  .reviewTop > div:nth-child(odd) {
+    margin-right: 0; }
+
+  .reviewBilling {
+    margin-top: 60px; }
+
+  .reviewTop .template {
+    height: 230px; } }
+@media screen and (max-width: 500px) {
+  .pageWrapper {
+    padding: 30px; }
+
+  .stepHeadline {
+    font-size: 32px;
+    margin-bottom: 50px; }
+
+  .step, .brokerName {
+    font-size: 14px; }
+
+  .paymentWrapper .step {
+    margin: 40px 0 30px; }
+
+  .packageHeader .step {
+    margin-top: 0; }
+
+  .comparePackages {
+    font-size: 14px; }
+
+  .packageDescription {
+    font-size: 14px; }
+
+  	/*.reviewInfo, .reviewLogo{
+  		width: 100%;
+  		margin-right: 0;
+  	}
+  
+  	.reviewLogo{
+  		margin-top: 40px;
+  	}
+  
+  	.reviewWrapper{
+  		margin-bottom: 60px;
+  	}*/
+  .previewTemplateModal .modalHeader {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+  .deviceTypeWrapper {
+    display: none; } }

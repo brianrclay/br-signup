@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up | Payment</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/global-style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+<div class="pageWrapper">
+	<div class="pageTransWrapper">
+		<div class="transGold"></div>
+		<div class="transWhite"></div>
+		<div class="paymentTrans"></div>
+		<div class="finishTrans"></div>
+	</div>
+
+	<div class="paymentMessages flex aiCenter jcCenter">
+		<div class="grey flex aiCenter jcCenter uppercase paymentProcessing"><img src="/images/loader.svg" class="mb30" width="100">Payment Processing</div>
+		<div class="green flex aiCenter jcCenter uppercase paymentSuccessful hide"><img src="/images/icons/payment-success.svg" class="mb30" width="100">Payment Successful</div>
+		<div class="red flex aiCenter jcCenter uppercase paymentError hide"><img src="/images/icons/payment-error.svg" class="mb30" width="100">Payment Error</div>
+	</div>
+
+	<nav class="mainNav flex aiCenter jcBetween">
+		<img src="/images/br360-logo.png" width="150px"
+		<img src="/images/icons/help-gold.svg" class="getHelp">
+	</nav>
+	<div class="stepWrapper">
+		<p class="step gold sansSerif uppercase mb10">Step <span class="stepNumber">3</span>: <span class="smallText">Payment Info</span></p>
+		<h1 class="black serif fs60 stepHeadline">Enter Payment Information</h1>
+	</div>
+
+	<div class="paymentWrapper fadeUpIn">
+		<p class="step gold sansSerif mb40 uppercase">Packages</p>
+		<div class="packagesWrapper flex flexWrap aiCenter">
+			<div class="packagesBox mr20 mb20 selectedPackage">
+				<div class="selectIcon aiCenter jcCenter flex">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A1A4A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+				</div>
+				<p class="black uppercase packageName">Basic</p>
+				<p class="black mb15 packagePriceWrapper">$<span class="packagePrice">50</span>/<span class="billingCycle">mo</span></p>
+				<p class="packageDescription">Includes site builder, CRM, Market Reporting, and Marketing integrations.</p>
+			</div>
+			<div class="packagesBox mr20 mb20">
+				<div class="selectIcon aiCenter jcCenter flex">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A1A4A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+				</div>
+				<p class="black uppercase packageName">Premium</p>
+				<p class="black mb15 packagePriceWrapper">$<span class="packagePrice">75</span>/<span class="billingCycle">mo</span></p>
+				<p class="packageDescription">Includes everything in Basic plus a dedicated support agent to your account.</p>
+			</div>
+		</div>
+		<!-- <div class="comparePackages black underline uppercase">Compare Packages</div> -->
+		<p class="step gold sansSerif uppercase mt60 mb40">Billing Address</p>
+		<form>
+			<div class="formRow mb20 flex aiCenter">
+				<div class="popLabel bigField">
+					<input type="text" name="street name" placeholder="Street Name">
+				</div>
+				<div class="popLabel smallField">
+					<input type="text" name="Apt #" placeholder="Apt #">
+				</div>
+			</div>
+			
+			<div class="formRow mb20 flex aiCenter">
+				<div class="popLabel">
+					<input type="text" name="City" placeholder="City">
+				</div>
+				<div class="popLabel">
+					<input type="text" name="State" placeholder="State">
+				</div>
+				<div class="popLabel">
+					<input type="text" name="Zip Code" placeholder="Zip Code">
+				</div>
+			</div>
+		</form>
+		<p class="step gold sansSerif uppercase mb40 mt60">Credit Card</p>
+		<form>
+			<div class="formRow mb20 flex aiCenter">
+				<div class="popLabel medField">
+					<input type="text" name="Card #" placeholder="Card #" class="creditCardInput">
+					<img src="/images/icons/visa.png" class="creditCardType hide">
+				</div>
+				<div class="popLabel smallField">
+					<input type="text" name="Exp. Date" placeholder="Exp. Date">
+				</div>
+			</div>
+			<div class="formRow mb70 flex aiCenter">
+				<div class="popLabel">
+					<input type="text" name="Name on Card" placeholder="Name on Card">
+				</div>
+				<div class="popLabel">
+					<input type="text" name="Security Code" placeholder="Security Code">
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="nextWrapper flex jcEnd showNext">
+		<a href="/info" class="backBtn sansSerif white whiteBtn mr10 btn">Back to Info</a>
+		<a href="#" class="nextBtn sansSerif white goldBtn btn toLogo">Purchase</a>
+	</div>
+</div>
+
+<!-- MODALS -->
+
+<div class="modalOverlay" onclick="closeModal()"></div>
+
+<!-- WE MIGHT BE USING THIS LATER ON -->
+<!-- <div class="comparePackagesModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<p class="helpHeadline black ml30">Compare Packages</p>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody">
+		<div class="tableRow tableHead">
+			<div class="featureBlock tableBlock borderRight"></div>
+			<div class="borderRight tableBlock"><p class="gold">Basic</p><p>$50/mo</p></div>
+			<div class="borderRight tableBlock"><p class="gold">Premium</p><p>$60/mo</p></div>
+			<div class="tableBlock"><p class="gold">Ultra</p><p>$70/mo</p></div>
+		</div>
+
+		<div class="tableRow">
+			<div class="featureBlock tableBlock borderRight">Website Builder</div>
+			<div class="tableBlock borderRight"><img src="/images/icons/check-green.svg"></div>
+			<div class="tableBlock borderRight"><img src="/images/icons/check-green.svg"></div>
+			<div class="tableBlock"><img src="/images/icons/check-green.svg"></div>
+		</div>
+
+		<div class="tableRow">
+			<div class="featureBlock tableBlock borderRight">CRM</div>
+			<div class="tableBlock borderRight"><img src="/images/icons/check-green.svg"></div>
+			<div class="tableBlock borderRight"><img src="/images/icons/check-green.svg"></div>
+			<div class="tableBlock"><img src="/images/icons/check-green.svg"></div>
+		</div>
+
+		<div class="tableRow">
+			<div class="featureBlock tableBlock borderRight">Market Reporting</div>
+			<div class="tableBlock borderRight">2 per month</div>
+			<div class="tableBlock borderRight">10 per month</div>
+			<div class="tableBlock">Unlimited</div>
+		</div>
+
+		<div class="tableRow">
+			<div class="featureBlock tableBlock borderRight">Dedicated Support</div>
+			<div class="tableBlock borderRight"><img src="/images/icons/x-red.svg"></div>
+			<div class="tableBlock borderRight"><img src="/images/icons/x-red.svg"></div>
+			<div class="tableBlock"><img src="/images/icons/check-green.svg"></div>
+		</div>
+
+		<div class="tableRow">
+			<div class="featureBlock tableBlock borderRight"></div>
+			<div class="tableBlock borderRight"><div class="btn goldBtn">Select</div></div>
+			<div class="tableBlock borderRight"><div class="btn goldBtn">Select</div></div>
+			<div class="tableBlock"><div class="btn goldBtn">Select</div></div>
+		</div>
+	</div>
+</div> -->
+
+<div class="helpModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<p class="helpHeadline black ml30">Get Help</p>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody p30">
+		<!-- <a href="#">
+			<img src="/images/icons/chat.svg">
+			<p class="black mb15 mt10">Chat Now</p>
+			<div class="gold mb40">Start Chat</div>
+		</a> -->
+		<a href="tel:888-850-4867">
+			<img src="/images/icons/phone.svg">
+			<p class="black mb15 mt10">Call Us</p>
+			<div class="gold mb40">888-850-4867</div>
+		</a>
+		<a href="mailto:support@blueroof360.com">
+			<img src="/images/icons/mail.svg">
+			<p class="black mb15 mt10">Email Us</p>
+			<div class="gold mb15">support@blueroof360.com</div>
+		</a>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<!-- <script>/*<![CDATA[*/window.zE||(function(e,t,s){var n=window.zE=window.zEmbed=function(){n._.push(arguments)}, a=n.s=e.createElement(t),r=e.getElementsByTagName(t)[0];n.set=function(e){ n.set._.push(e)},n._=[],n.set._=[],a.async=true,a.setAttribute("charset","utf-8"), a.src="https://static.zdassets.com/ekr/asset_composer.js?key="+s, n.t=+new Date,a.type="text/javascript",r.parentNode.insertBefore(a,r)})(document,"script","2b4b595b-3793-44c9-8158-0fbdbde47377");/*]]>*/</script> -->
+</body>
+</html>

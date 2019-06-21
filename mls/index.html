@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up | MLS Info</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Playfair+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/global-style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+<div class="pageWrapper">
+	<div class="pageTransWrapper">
+		<div class="transGold"></div>
+		<div class="transWhite"></div>
+		<div class="paymentTrans"></div>
+		<div class="finishTrans"></div>
+	</div>
+
+	<nav class="mainNav flex aiCenter jcBetween">
+		<img src="/images/br360-logo.png" width="150px"
+		<img src="/images/icons/help-gold.svg" class="getHelp">
+	</nav>
+	<div class="stepWrapper">
+		<p class="step gold sansSerif uppercase mb10">Step <span class="stepNumber">5</span>: <span class="smallText">MLS Info</span></p>
+		<h1 class="black serif fs60 stepHeadline">Enter Your MLS Information</h1>
+	</div>
+
+	<div class="mlsInfoWrapper flex fadeUpIn aiCenter flexWrap">
+		<div class="dropDown mb20 mr20">
+			<select class="hasError">
+				<option>Country</option>
+				<option>United States</option>
+				<option>Germany</option>
+				<option>Russia</option>
+			</select>
+			<span class="inputErrorMessage flex aiCenter"><img src="../images/icons/error.svg" class="mr10">This select has an error</span>
+		</div>
+		<div class="dropDown mb20 mr20">
+			<select>
+				<option>State</option>
+				<option>United States</option>
+				<option>Germany</option>
+				<option>Russia</option>
+			</select>
+		</div>
+		<div class="dropDown mb20 mr20">
+			<select class="success">
+				<option>City</option>
+				<option>United States</option>
+				<option>Germany</option>
+				<option>Russia</option>
+			</select>
+		</div>
+		<div class="popLabel mb20">
+			<input type="text" name="mlsID" placeholder="MLS ID" class="userInfoInput mlsIdInput">
+		</div>
+	</div>
+
+	<div class="nextWrapper flex jcEnd showNext">
+		<a href="/" class="backBtn sansSerif white whiteBtn mr10 btn">Back to Templates</a>
+		<a href="/payment" class="nextBtn sansSerif white goldBtn btn toInfo">Next</a>
+	</div>
+</div>
+
+<!-- MODALS -->
+
+<div class="modalOverlay" onclick="closeModal()"></div>
+
+<div class="helpModal modal">
+	<div class="modalHeader flex aiCenter jcBetween offWhiteBG">
+		<p class="helpHeadline black ml30">Get Help</p>
+		<img src="/images/icons/x.svg" onclick="closeModal()" class="closeModal p20">
+	</div>
+	<div class="modalBody p30">
+		<!-- <a href="#">
+			<img src="/images/icons/chat.svg">
+			<p class="black mb15 mt10">Chat Now</p>
+			<div class="gold mb40">Start Chat</div>
+		</a> -->
+		<a href="tel:888-850-4867">
+			<img src="/images/icons/phone.svg">
+			<p class="black mb15 mt10">Call Us</p>
+			<div class="gold mb40">888-850-4867</div>
+		</a>
+		<a href="mailto:support@blueroof360.com">
+			<img src="/images/icons/mail.svg">
+			<p class="black mb15 mt10">Email Us</p>
+			<div class="gold mb15">support@blueroof360.com</div>
+		</a>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+</html>
